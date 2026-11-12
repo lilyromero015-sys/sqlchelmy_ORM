@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
 const FORMULARIO_VACIO = {
     nombre: "",
@@ -235,8 +235,8 @@ function Productos() {
                                     <td className="px-4 py-3">
                                         <span
                                             className={`rounded-full px-2 py-1 text-xs font-semibold ${p.disponible
-                                                    ? "bg-green-100 text-green-700"
-                                                    : "bg-red-100 text-red-700"
+                                                ? "bg-green-100 text-green-700"
+                                                : "bg-red-100 text-red-700"
                                                 }`}
                                         >
                                             {p.disponible ? "Sí" : "No"}

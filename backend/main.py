@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS 
-from flasgger import Swagger 
+import flasgger 
 import os
 
 from app.models import db, Producto, Categoria, Entrada
@@ -15,7 +15,7 @@ app.config.from_object(Config)
 
 # Inicializar extensiones 
 CORS(app) 
-swagger = Swagger(app) 
+swagger = flasgger.Swagger(app) 
 db.init_app(app) 
 
 # Crear tablas automáticamente 

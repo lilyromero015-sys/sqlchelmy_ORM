@@ -9,3 +9,6 @@ dist-ssr/
 .vscode/
 .idea/
 .DS_Store
+backend/ca.pem
+
+*.sql
